@@ -126,4 +126,41 @@ h1:hover {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  padding-bottom: 50px;
+}
+.item {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 13px -5px rgba(43, 43, 43, 1);
+  border: 2px solid #f8b400;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.item:hover {
+  transform: scale(1.05);
+}
+.price {
+  font-weight: bolder;
+}
+.add-to-cart {
+  border: 0;
+  height: 40px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  border-radius: 30px;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.add-to-cart:hover {
+  transform: scale(1.05);
+}
+
+.item-img-container {
+  border-top: 2px solid #f8b400;
+  border-bottom: 2px solid #f8b400;
 }
