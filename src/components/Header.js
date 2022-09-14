@@ -9,7 +9,10 @@ function Header() {
   return (
     <>
       <div className="header">
-        <h1>Funny Socks Shop</h1>
+        <h1>
+          {" "}
+          <span className="orange">Funny </span> Socks Shop
+        </h1>
         <div className="nav">
           <Link className="nav-link" to="/">
             Home{" "}
@@ -20,7 +23,7 @@ function Header() {
           <Link className="nav-link" to="/contact">
             Contact
           </Link>
-          <Link className="nav-link" to="/shopping-cart">
+          <Link className="nav-icon" to="/shopping-cart">
             <img src={cartImg} alt="shopping-cart" className="cart-img" />
           </Link>
         </div>

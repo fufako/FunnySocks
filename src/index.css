@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 body {
   margin: 0px;
 }
 .header {
-  background-color: bisque;
   padding: 30px;
   display: flex;
   align-items: center;
@@ -10,19 +12,107 @@ body {
 }
 h1 {
   margin: 0;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+h1:hover {
+  transform: scale(1.1);
+}
+.funny {
+  color: #f8b400;
+}
+.funny:hover {
+  color: black;
 }
 .nav {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  font-family: "Poppins", sans-serif;
 }
 .nav-link {
   text-decoration: none;
   font-size: 1.5rem;
-  color: black;
+  color: #f8b400;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-link:hover {
+  transform: scale(1.1);
+}
+.nav-link::after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: black;
+  transition: 300ms;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.nav:last-child .nav-link {
+  text-decoration: none;
+}
+.nav-icon {
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-icon:hover {
+  transform: scale(1.1);
 }
 .cart-img {
   height: 50px;
   width: 50px;
+}
+.home-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.home-top {
+  font-size: 1.3rem;
+  margin: 0;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+}
+.home-middle {
+  font-size: 6.2rem;
+  margin: 0;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+}
+.home-bottom {
+  font-size: 2.2rem;
+  margin: 0;
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+  color: #f8b400;
+}
+.home-text-container {
+  text-align: center;
+  padding: 100px;
+}
+.shop-now {
+  margin: 10px;
+  font-size: 2.2rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #f8b400;
+  border: 0;
+  width: 280px;
+  height: 60px;
+  border-radius: 100px;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.shop-now:hover {
+  transform: scale(1.1);
+  color: #f8b400;
+  background-color: black;
+}
+.orange {
+  color: #f8b400;
 }
