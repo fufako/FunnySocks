@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 function Home() {
   return (
     <div className="home-container">
@@ -8,7 +9,9 @@ function Home() {
           <span className="orange">The cheapest</span> <br /> The most fun
         </p>
         <p className="home-bottom">Funny Stocks Shop</p>
-        <button className="shop-now">Shop now</button>
+        <Link className="shop-now" to="/products">
+          Shop now
+        </Link>
       </div>
     </div>
   )
