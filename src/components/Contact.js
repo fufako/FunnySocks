@@ -1,8 +1,4 @@
 function Contact() {
-  return (
-    <div className="header">
-      <h1>Funny Socks Shop</h1>
-    </div>
-  )
+  return <h1>Contact</h1>
 }
 export default Contact
