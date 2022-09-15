@@ -1,7 +1,8 @@
 import { useRef } from "react"
 
 function CartItem(props) {
-  const { item, handleChange, handleDecrease, handleIncrease } = props
+  const { item, handleChange, handleDecrease, handleIncrease, removeFromCart } =
+    props
   const inputRef = useRef()
   const handleInputValue = (item) => {
     inputRef.current.value = item.amount
@@ -39,7 +40,14 @@ function CartItem(props) {
               +
             </button>
           </div>
-          <div className="remove">Remove item</div>
+          <div
+            className="remove"
+            onClick={() => {
+              removeFromCart(item)
+            }}
+          >
+            Remove item
+          </div>
         </div>
       </div>
     </div>

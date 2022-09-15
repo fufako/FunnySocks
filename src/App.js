@@ -11,10 +11,18 @@ function App() {
       item.amount += 1
     }
   }
+  const removeFromCart = (item) => {
+    const nameToRemove = item.name
+    setItem(items.filter((item) => item.name !== nameToRemove))
+  }
   console.log(items)
   return (
     <div className="main">
-      <Header items={items} addToCart={addToCart}></Header>
+      <Header
+        items={items}
+        addToCart={addToCart}
+        removeFromCart={removeFromCart}
+      ></Header>
     </div>
   )
 }

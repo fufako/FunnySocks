@@ -6,7 +6,7 @@ import Cart from "./Cart"
 import cartImg from "../images/cart.png"
 
 function Header(props) {
-  const { items, addToCart, handleTotal } = props
+  const { items, addToCart, handleTotal, removeFromCart } = props
   return (
     <>
       <div className="header">
@@ -43,7 +43,13 @@ function Header(props) {
         <Route path="/contact" element={<Contact />} />
         <Route
           path="/shopping-cart"
-          element={<Cart items={items} addToCart={addToCart} />}
+          element={
+            <Cart
+              items={items}
+              addToCart={addToCart}
+              removeFromCart={removeFromCart}
+            />
+          }
         />
       </Routes>
     </>

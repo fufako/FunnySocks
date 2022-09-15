@@ -3,7 +3,7 @@ import CartItem from "./CartItem"
 import EmptyCart from "./EmptyCart"
 import React, { useState, useEffect } from "react"
 function Cart(props) {
-  const { items } = props
+  const { items, removeFromCart } = props
 
   const [total, setTotal] = useState()
 
@@ -45,6 +45,7 @@ function Cart(props) {
                 handleChange={handleChange}
                 handleDecrease={handleDecrease}
                 handleIncrease={handleIncrease}
+                removeFromCart={removeFromCart}
               />
             ))}
             <div className="total">Total: {Math.round(total * 100) / 100}$</div>

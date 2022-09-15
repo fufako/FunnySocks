@@ -4,7 +4,7 @@ function EmptyCart() {
     <div className="empty">
       {" "}
       <p>Your cart is empty</p>
-      <img src={cartImg} alt="shopping-cart" className="cart-img" />
+      <img src={cartImg} alt="shopping-cart" className="cart-img-empty" />
     </div>
   )
 }
