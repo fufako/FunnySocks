@@ -67,7 +67,12 @@ function Products() {
       <div className="products-main-container">
         <div className="grid-container">
           {items.map((item) => (
-            <Item src={item.src} name={item.name} price={item.price} />
+            <Item
+              src={item.src}
+              name={item.name}
+              price={item.price}
+              key={item.key}
+            />
           ))}
         </div>
       </div>

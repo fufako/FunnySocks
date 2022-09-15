@@ -9,10 +9,13 @@ function Header() {
   return (
     <>
       <div className="header">
-        <h1>
-          {" "}
-          <span className="orange">Funny </span> Socks Shop
-        </h1>
+        <Link to="/" className="home-main-title">
+          <h1>
+            {" "}
+            <span className="orange">Funny </span> Socks Shop
+          </h1>
+        </Link>
+
         <div className="nav">
           <Link className="nav-link" to="/">
             Home{" "}
@@ -25,6 +28,7 @@ function Header() {
           </Link>
           <Link className="nav-icon" to="/shopping-cart">
             <img src={cartImg} alt="shopping-cart" className="cart-img" />
+            <div className="count">1</div>
           </Link>
         </div>
       </div>
