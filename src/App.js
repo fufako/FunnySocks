@@ -1,10 +1,13 @@
 import Header from "./components/Header"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 function App() {
   const [items, setItem] = useState([])
 
   const addToCart = (item) => {
-    if (!items.includes(item)) {
+    const nameToFind = item.name
+    const exists = Boolean(items.find((item) => item.name === nameToFind))
+    if (!exists) {
+      console.log("I added")
       setItem((prevItems) => [...prevItems, item])
       item.amount += 1
     } else {
@@ -15,7 +18,7 @@ function App() {
     const nameToRemove = item.name
     setItem(items.filter((item) => item.name !== nameToRemove))
   }
-  console.log(items)
+
   return (
     <div className="main">
       <Header

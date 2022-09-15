@@ -6,17 +6,22 @@ function Cart(props) {
   const { items, removeFromCart } = props
 
   const [total, setTotal] = useState()
+  const handleRemove = (item) => {
+    console.log("Before removeFormCart: " + total)
+    removeFromCart(item)
+    console.log("Items: " + items)
+    countTotal()
+    console.log("After removeFormCart: " + total)
+  }
 
   const handleChange = (e, item) => {
     item.amount = parseInt(e.target.value)
-    console.log(item.name + " " + item.amount)
     countTotal()
   }
   const handleDecrease = (item) => {
     if (item.amount === 1) return
     item.amount -= 1
     countTotal()
-    console.log("minus")
   }
   const handleIncrease = (item) => {
     item.amount += 1
@@ -45,7 +50,7 @@ function Cart(props) {
                 handleChange={handleChange}
                 handleDecrease={handleDecrease}
                 handleIncrease={handleIncrease}
-                removeFromCart={removeFromCart}
+                handleRemove={handleRemove}
               />
             ))}
             <div className="total">Total: {Math.round(total * 100) / 100}$</div>

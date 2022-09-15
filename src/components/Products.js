@@ -69,6 +69,7 @@ function Products(props) {
     },
   ]
   const { addToCart } = props
+
   const [products, setProducts] = useState(socks)
   return (
     <>
