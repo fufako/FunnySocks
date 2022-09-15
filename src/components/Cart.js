@@ -13,7 +13,7 @@ function Cart(props) {
         ) : (
           <EmptyCart />
         )}
-
+        <div className="total">Total: </div>
         <button className="payment">Proceed to payment</button>
         <Link to="/products" className="back-to-shop">
           Back to shop
