@@ -10,7 +10,7 @@ function CartItem(props) {
           <p className="cart-price">{item.price}</p>
           <div className="add-remove">
             <button>+</button>
-            <input type="number"></input>
+            <input type="number" value={item.amount}></input>
             <button>-</button>
           </div>
         </div>

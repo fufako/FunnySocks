@@ -9,14 +9,13 @@ function Cart(props) {
 
   const countTotal = () => {
     const total = items.reduce(
-      (prev, next) => prev + parseFloat(next.price.substring(1)),
+      (prev, next) => prev + parseFloat(next.price.substring(1)) * next.amount,
       0
     )
     setTotal(total)
   }
   useEffect(() => {
     countTotal()
-    console.log(total)
   }, items)
 
   return (
