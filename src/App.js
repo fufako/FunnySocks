@@ -6,6 +6,7 @@ function App() {
   const addToCart = (item) => {
     setItem((prevItems) => [...prevItems, item])
   }
+
   return (
     <div className="main">
       <Header items={items} addToCart={addToCart}></Header>

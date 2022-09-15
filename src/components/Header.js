@@ -38,7 +38,7 @@ function Header(props) {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products addToCart={addToCart} />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/shopping-cart" element={<Cart />} />
+        <Route path="/shopping-cart" element={<Cart items={items} />} />
       </Routes>
     </>
   )
