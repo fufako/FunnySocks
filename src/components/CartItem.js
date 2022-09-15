@@ -39,6 +39,7 @@ function CartItem(props) {
               +
             </button>
           </div>
+          <div className="remove">Remove item</div>
         </div>
       </div>
     </div>

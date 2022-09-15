@@ -204,6 +204,7 @@ h1:hover {
   border-radius: 5px;
   transform: scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 .payment:hover {
   transform: scale(1.05);
@@ -277,10 +278,21 @@ h1:hover {
   font-family: "Poppins", sans-serif;
   border-radius: 20px;
   background-color: #f8b400;
+  cursor: pointer;
 }
 .total {
   font-family: "Poppins", sans-serif;
   text-align: center;
   margin: 0 0 30px 0;
   font-size: 1.2rem;
+}
+.remove {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #465a61;
+}
+.remove:hover {
+  text-decoration: underline;
 }

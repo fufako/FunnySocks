@@ -13,7 +13,7 @@ function Cart(props) {
     countTotal()
   }
   const handleDecrease = (item) => {
-    if (item.amount === 0) return
+    if (item.amount === 1) return
     item.amount -= 1
     countTotal()
     console.log("minus")
