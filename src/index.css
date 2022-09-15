@@ -196,6 +196,7 @@ h1:hover {
   padding: 0px 20px;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
+  min-width: 400px;
 }
 .payment {
   background-color: #f8b400;
@@ -310,4 +311,22 @@ h1:hover {
 }
 .remove:hover {
   text-decoration: underline;
+}
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.git {
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+.icons {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+.fufako {
+  color: #f8b400;
+  text-decoration: none;
 }

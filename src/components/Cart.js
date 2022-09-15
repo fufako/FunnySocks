@@ -2,16 +2,16 @@ import { Link } from "react-router-dom"
 import CartItem from "./CartItem"
 import EmptyCart from "./EmptyCart"
 import React, { useState, useEffect } from "react"
+import { useCallback } from "react"
 function Cart(props) {
   const { items, removeFromCart } = props
 
   const [total, setTotal] = useState()
+
   const handleRemove = (item) => {
-    console.log("Before removeFormCart: " + total)
+    console.log("Before removeFormCart: " + items)
     removeFromCart(item)
-    console.log("Items: " + items)
-    countTotal()
-    console.log("After removeFormCart: " + total)
+    console.log("After removeFormCart: " + items)
   }
 
   const handleChange = (e, item) => {
@@ -27,16 +27,18 @@ function Cart(props) {
     item.amount += 1
     countTotal()
   }
-  const countTotal = () => {
+  const countTotal = useCallback(() => {
     const total = items.reduce(
       (prev, next) => prev + parseFloat(next.price.substring(1)) * next.amount,
       0
     )
     setTotal(total)
-  }
+  }, [items])
+
   useEffect(() => {
     countTotal()
-  }, [])
+  }, [items, countTotal])
+
   return (
     <div className="main-cart-container">
       <div className="cart">
