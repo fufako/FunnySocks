@@ -1,4 +1,9 @@
 function EmptyCart() {
-  return <div className="empty">Your cart is empty</div>
+  return (
+    <div className="empty">
+      {" "}
+      <p>Your cart is empty</p>{" "}
+    </div>
+  )
 }
 export default EmptyCart

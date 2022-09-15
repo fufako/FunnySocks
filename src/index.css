@@ -223,3 +223,11 @@ h1:hover {
 .back-to-shop:hover {
   transform: scale(1.05);
 }
+.empty {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
