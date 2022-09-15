@@ -1,14 +1,16 @@
 function Item(props) {
-  const { src, name, price, addToCart } = props
+  const { item, addToCart } = props
   return (
     <div className="item">
-      <p className="item-name">{name}</p>
+      <p className="item-name">{item.name}</p>
       <p className="item-img-container">
-        <img src={src} alt={name} className="item-img" />
+        <img src={item.src} alt={item.name} className="item-img" />
       </p>
 
-      <p className="price">{price}</p>
-      <button className="add-to-cart">Add to cart</button>
+      <p className="price">{item.price}</p>
+      <button className="add-to-cart" onClick={addToCart.bind(this, item)}>
+        Add to cart
+      </button>
     </div>
   )
 }

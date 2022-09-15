@@ -5,7 +5,8 @@ import Contact from "./Contact"
 import Cart from "./Cart"
 import cartImg from "../images/cart.png"
 
-function Header() {
+function Header(props) {
+  const { items, addToCart } = props
   return (
     <>
       <div className="header">
@@ -28,14 +29,14 @@ function Header() {
           </Link>
           <Link className="nav-icon" to="/shopping-cart">
             <img src={cartImg} alt="shopping-cart" className="cart-img" />
-            <div className="count">1</div>
+            <div className="count">{items.length}</div>
           </Link>
         </div>
       </div>
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/products" element={<Products addToCart={addToCart} />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/shopping-cart" element={<Cart />} />
       </Routes>

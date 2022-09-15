@@ -9,7 +9,7 @@ import Tiger from "../images/Tiger.png"
 import Item from "./Item"
 import React, { useState } from "react"
 
-function Products() {
+function Products(props) {
   const socks = [
     {
       src: Animal,
@@ -60,19 +60,15 @@ function Products() {
       key: 8,
     },
   ]
-  const [items, setItems] = useState(socks)
+  const { addToCart } = props
+  const [products, setProducts] = useState(socks)
   return (
     <>
       <h2 className="sub-title">Products</h2>
       <div className="products-main-container">
         <div className="grid-container">
-          {items.map((item) => (
-            <Item
-              src={item.src}
-              name={item.name}
-              price={item.price}
-              key={item.key}
-            />
+          {products.map((product) => (
+            <Item item={product} key={product.key} addToCart={addToCart} />
           ))}
         </div>
       </div>
