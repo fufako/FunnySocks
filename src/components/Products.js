@@ -62,7 +62,7 @@ function Products(props) {
   ]
   const { addToCart } = props
   const [products, setProducts] = useState(socks)
-
+  console.log(products)
   return (
     <>
       <h2 className="sub-title">Products</h2>
