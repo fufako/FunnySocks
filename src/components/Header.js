@@ -41,7 +41,10 @@ function Header(props) {
           element={<Products addToCart={addToCart} handleTotal={handleTotal} />}
         />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/shopping-cart" element={<Cart items={items} />} />
+        <Route
+          path="/shopping-cart"
+          element={<Cart items={items} addToCart={addToCart} />}
+        />
       </Routes>
     </>
   )

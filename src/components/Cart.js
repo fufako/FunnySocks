@@ -7,6 +7,11 @@ function Cart(props) {
 
   const [total, setTotal] = useState()
 
+  const handleChange = (e, item) => {
+    item.amount = parseInt(e.target.value)
+    console.log(item.name + " " + item.amount)
+    countTotal()
+  }
   const countTotal = () => {
     const total = items.reduce(
       (prev, next) => prev + parseFloat(next.price.substring(1)) * next.amount,
@@ -16,8 +21,7 @@ function Cart(props) {
   }
   useEffect(() => {
     countTotal()
-  }, items)
-
+  }, [])
   return (
     <div className="main-cart-container">
       <div className="cart">
@@ -25,9 +29,13 @@ function Cart(props) {
         {items.length > 0 ? (
           <>
             {items.map((item) => (
-              <CartItem item={item} key={item.key} />
+              <CartItem
+                item={item}
+                key={item.key}
+                handleChange={handleChange}
+              />
             ))}
-            <div className="total">Total: {total}$</div>
+            <div className="total">Total: {Math.round(total * 100) / 100}$</div>
           </>
         ) : (
           <EmptyCart />

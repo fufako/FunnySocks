@@ -1,5 +1,8 @@
+import React, { useState, useEffect } from "react"
 function CartItem(props) {
-  const { item } = props
+  const { item, handleChange } = props
+
+  console.log(item)
 
   return (
     <div className="items-container">
@@ -10,7 +13,11 @@ function CartItem(props) {
           <p className="cart-price">{item.price}</p>
           <div className="add-remove">
             <button>+</button>
-            <input type="number" value={item.amount}></input>
+            <input
+              type="number"
+              defaultValue={item.amount}
+              onChange={(e) => handleChange(e, item)}
+            ></input>
             <button>-</button>
           </div>
         </div>
