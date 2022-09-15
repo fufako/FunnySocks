@@ -231,6 +231,7 @@ h1:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .item-container {
   display: flex;
