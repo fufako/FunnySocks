@@ -12,6 +12,15 @@ function Cart(props) {
     console.log(item.name + " " + item.amount)
     countTotal()
   }
+  const handleDecrease = (item) => {
+    item.amount -= 1
+    countTotal()
+    console.log("minus")
+  }
+  const handleIncrease = (item) => {
+    item.amount += 1
+    countTotal()
+  }
   const countTotal = () => {
     const total = items.reduce(
       (prev, next) => prev + parseFloat(next.price.substring(1)) * next.amount,
@@ -33,6 +42,8 @@ function Cart(props) {
                 item={item}
                 key={item.key}
                 handleChange={handleChange}
+                handleDecrease={handleDecrease}
+                handleIncrease={handleIncrease}
               />
             ))}
             <div className="total">Total: {Math.round(total * 100) / 100}$</div>
