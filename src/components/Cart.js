@@ -8,12 +8,16 @@ function Cart(props) {
     <div className="main-cart-container">
       <div className="cart">
         <h3 className="cart-title">YOUR SHOPPING CART</h3>
-        {items.length >= 1 ? (
-          items.map((item) => <CartItem item={item} key={item.key} />)
+        {items.length > 0 ? (
+          <>
+            {items.map((item) => (
+              <CartItem item={item} key={item.key} />
+            ))}
+            <div className="total">Total: </div>
+          </>
         ) : (
           <EmptyCart />
         )}
-        <div className="total">Total: </div>
         <button className="payment">Proceed to payment</button>
         <Link to="/products" className="back-to-shop">
           Back to shop
