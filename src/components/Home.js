@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
+import React, { useEffect } from "react"
 function Home() {
+  useEffect(() => {}, [])
   return (
     <div className="home-container">
       <div className="home-text-container">

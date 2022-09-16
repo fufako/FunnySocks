@@ -10,7 +10,7 @@ function Header(props) {
   return (
     <>
       <div className="header">
-        <Link to="/" className="home-main-title">
+        <Link to="/home" className="home-main-title">
           <h1>
             {" "}
             <span className="orange">Funny </span> Socks Shop
