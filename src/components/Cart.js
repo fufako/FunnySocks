@@ -61,7 +61,7 @@ function Cart(props) {
           <EmptyCart />
         )}
         <button className="payment">Proceed to payment</button>
-        <Link to="react-shopping-cart/products" className="back-to-shop">
+        <Link to="../react-shopping-cart/products" className="back-to-shop">
           Back to shop
         </Link>
       </div>
