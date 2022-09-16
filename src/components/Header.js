@@ -18,7 +18,7 @@ function Header(props) {
         </Link>
 
         <div className="nav">
-          <Link className="nav-link" to="/">
+          <Link className="nav-link" to="/home">
             Home{" "}
           </Link>
           <Link className="nav-link" to="/products">
@@ -35,7 +35,7 @@ function Header(props) {
       </div>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route
           path="/products"
           element={<Products addToCart={addToCart} handleTotal={handleTotal} />}
