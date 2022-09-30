@@ -10,7 +10,7 @@ function Header(props) {
   return (
     <>
       <div className="header">
-        <Link to="react-shopping-cart" className="home-main-title">
+        <Link to="FunnySocks" className="home-main-title">
           <h1>
             {" "}
             <span className="orange">Funny </span> Socks Shop
@@ -18,16 +18,16 @@ function Header(props) {
         </Link>
 
         <div className="nav">
-          <Link className="nav-link" to="react-shopping-cart">
+          <Link className="nav-link" to="FunnySocks">
             Home{" "}
           </Link>
-          <Link className="nav-link" to="react-shopping-cart/products">
+          <Link className="nav-link" to="FunnySocks/products">
             Products{" "}
           </Link>
-          <Link className="nav-link" to="react-shopping-cart/contact">
+          <Link className="nav-link" to="FunnySocks/contact">
             Contact
           </Link>
-          <Link className="nav-icon" to="react-shopping-cart/shopping-cart">
+          <Link className="nav-icon" to="FunnySocks/shopping-cart">
             <img src={cartImg} alt="shopping-cart" className="cart-img" />
             <div className="count">{items.length}</div>
           </Link>
@@ -35,14 +35,14 @@ function Header(props) {
       </div>
 
       <Routes>
-        <Route path="/react-shopping-cart" element={<Home />} />
+        <Route path="/FunnySocks" element={<Home />} />
         <Route
-          path="react-shopping-cart/products"
+          path="FunnySocks/products"
           element={<Products addToCart={addToCart} handleTotal={handleTotal} />}
         />
-        <Route path="react-shopping-cart/contact" element={<Contact />} />
+        <Route path="FunnySocks/contact" element={<Contact />} />
         <Route
-          path="react-shopping-cart/shopping-cart"
+          path="FunnySocks/shopping-cart"
           element={
             <Cart
               items={items}
